@@ -28,10 +28,16 @@
     </style>
   </head>
   <body>
-    
+    <h1>
+      Darts3000
+    </h1>
+    <div id="root">
+      
+    </div>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
+
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // // The Firebase SDK is initialized and available here!
         //
@@ -60,10 +66,10 @@
             'remoteConfig',
             'performance',
           ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+          // loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
         } catch (e) {
           console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+          // loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
         }
       });
     </script>
