@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import "./App.css";
 import Players from "./Players";
 import GameBoard from "./GameBoard";
+import PreGameBoard from "./PreGameBoard";
 
 const Game = () => {
   const [players, setPlayers] = useState(["Player 1"]);
   const [startingScore, setStartingScore] = useState(301);
+  const [finishingMode, setFinishingMode] = useState("Double Out");
   const [gameStarted, setGameStarted] = useState(false);
+  const [gameWon, setGameWon] = useState(false);
   const [currentScore, setCurrentScore] = useState(0);
   const [currentMultiplier, setCurrentMultiplier] = useState(1);
   const [pointsHistory, setPointsHistory] = useState([]);
@@ -17,11 +20,13 @@ const Game = () => {
     newPlayers[index] = playerName;
     setPlayers(newPlayers);
   };
+
   // function to remove players
   const handleRemovePlayer = (index) => {
     const newPlayers = players.filter((_, i) => i !== index);
     setPlayers(newPlayers);
   };
+
   // this function handles the state of the game and what will be rendered later
   const handleStartGame = () => {
     setGameStarted(true);
@@ -30,13 +35,19 @@ const Game = () => {
 
   // this function handles the button clicks
   const handleScoreClick = (dartValue, currentMultiplier) => {
-    setCurrentScore(currentScore - dartValue * currentMultiplier);
+    const newScore = currentScore - dartValue * currentMultiplier;
+    setCurrentScore(newScore);
     setCurrentMultiplier(1); // Reset the multiplier
 
     setPointsHistory([
       ...pointsHistory,
       { score: dartValue, multiplier: currentMultiplier },
     ]);
+
+    //check if the game is won
+    if (newScore === 0) {
+      handleGameWon();
+    }
   };
 
   // this function handles the multiplier-button clicks (DOUBLE, TRIPLE)
@@ -55,6 +66,10 @@ const Game = () => {
       setCurrentScore(currentScore + lastMove.score * lastMove.multiplier);
       setPointsHistory([...pointsHistory]);
     }
+  };
+
+  const handleGameWon = () => {
+    setGameWon(true);
   };
 
   return (
@@ -77,16 +92,12 @@ const Game = () => {
             removePlayer={handleRemovePlayer}
           />
 
-          <h3>Select Starting Score</h3>
-
-          <select
-            type="number"
-            value={startingScore}
-            onChange={(e) => setStartingScore(parseInt(e.target.value))}
-          >
-            <option value="301">301</option>
-            <option value="501">501</option>
-          </select>
+          <PreGameBoard
+            startingScore={startingScore}
+            setStartingScore={setStartingScore}
+            finishingMode={finishingMode}
+            setFinishingMode={setFinishingMode}
+          />
 
           <button onClick={handleStartGame}>Play</button>
         </div>
@@ -102,6 +113,11 @@ const Game = () => {
             currentScore={currentScore}
             player={players[0]}
           />
+        </div>
+      )}
+      {gameWon && (
+        <div>
+          <h1>You've won!</h1>
         </div>
       )}
     </div>

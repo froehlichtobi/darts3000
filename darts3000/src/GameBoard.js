@@ -36,6 +36,7 @@ const GameBoard = ({
         >
           DOUBLE
         </button>
+
         <button
           style={{
             backgroundColor: currentMultiplier === 3 ? "green" : "#0d0000",
@@ -45,6 +46,7 @@ const GameBoard = ({
         >
           TRIPLE
         </button>
+
         <button onClick={() => handleUndo()}>UNDO</button>
       </div>
     </div>
