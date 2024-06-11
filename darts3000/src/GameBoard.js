@@ -1,31 +1,37 @@
-import React, { useState } from "react";
+import React from 'react';
 
 const GameBoard = ({
+  player,
+  currentScore,
+  currentMultiplier,
   handleScoreClick,
   handleMultiplierClick,
   handleUndo,
-  currentMultiplier,
-  currentScore,
-  player,
 }) => {
   return (
-    <div>
+    <>
       <p>
         Score of {player}: {currentScore}
       </p>
-      {[...Array(21).keys()].map((num) => (
-        <button
-          key={num}
-          onClick={() => handleScoreClick(num, currentMultiplier)}
-        >
-          {num}
-        </button>
-      ))}
-      {currentMultiplier !== 3 && (
-        <button onClick={() => handleScoreClick(25, currentMultiplier)}>
-          25
-        </button>
-      )}
+      <div className="dartsValueButton-container">
+        {[...Array(21).keys()].map((num) => (
+          <button
+            className="dartsValueButton"
+            key={num}
+            onClick={() => handleScoreClick(num, currentMultiplier)}
+          >
+            {num}
+          </button>
+        ))}
+        {currentMultiplier !== 3 && (
+          <button
+            className="dartsValueButton"
+            onClick={() => handleScoreClick(25, currentMultiplier)}
+          >
+            25
+          </button>
+        )}
+      </div>
       <div>
         <button
           style={{
@@ -49,7 +55,7 @@ const GameBoard = ({
 
         <button onClick={() => handleUndo()}>UNDO</button>
       </div>
-    </div>
+    </>
   );
 };
 

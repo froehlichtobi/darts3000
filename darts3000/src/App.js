@@ -46,7 +46,10 @@ const Game = () => {
 
     //check if the game is won
     if (newScore === 0) {
-      handleGameWon();
+      setGameWon(true);;
+    }
+    else {
+      setGameWon(false);
     }
   };
 
@@ -68,9 +71,7 @@ const Game = () => {
     }
   };
 
-  const handleGameWon = () => {
-    setGameWon(true);
-  };
+
 
   return (
     <div className="container">
