@@ -46,9 +46,8 @@ const Game = () => {
 
     //check if the game is won
     if (newScore === 0) {
-      setGameWon(true);;
-    }
-    else {
+      setGameWon(true);
+    } else {
       setGameWon(false);
     }
   };
@@ -70,8 +69,6 @@ const Game = () => {
       setPointsHistory([...pointsHistory]);
     }
   };
-
-
 
   return (
     <div className="container">
@@ -114,6 +111,13 @@ const Game = () => {
             currentScore={currentScore}
             player={players[0]}
           />
+          <ul>
+            {pointsHistory.map((entry, index) => (
+              <li key={index}>
+                Score: {entry.score}, Multiplier: {entry.multiplier}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
       {gameWon && (
