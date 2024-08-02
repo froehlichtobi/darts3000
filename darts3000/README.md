@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Darts 3000
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello my name is Tobias and I'm from Austria, this is my first full project.
 
-## Available Scripts
+## Try it out 
 
-In the project directory, you can run:
+You can play around with my web app on http://darts3000.web.app (hosted by Firebase)
 
 ### `npm start`
 
