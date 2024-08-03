@@ -67,11 +67,11 @@
 }
 
 .dartsValueButton:hover {
-  background-color: #0c2f85; /* Darker green on hover */
+  background-color: #0c2f85; /* Darker blue on hover */
   transform: scale(1.15); /* Slightly enlarge button on hover */
 }
 
 .dartsValueButton:active {
-  background-color: #3e8e41; /* Even darker green when clicked */
+  background-color: #031e63; /* Even darker blue when clicked */
   transform: scale(1.05); /* Slightly reduce the scale when clicked */
 }
