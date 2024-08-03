@@ -3,6 +3,7 @@
   margin: 0 auto;
   background-color: cadetblue;
   color: white;
+  text-align: center;
 }
 
 .App {
@@ -46,7 +47,7 @@
 
 .dartsValueButton-container {
   display: grid;
-  grid-template-columns: repeat(5, auto); /* Adjusted to fit content */
+  grid-template-columns: repeat(4, auto); /* Adjusted to fit content */
   gap: 10px; /* Space between buttons */
   padding: 10px;
   justify-content: center; /* Center the grid horizontally */
@@ -54,6 +55,7 @@
 .dartsValueButton {
   background-color: #2b33a5; /* Green background */
   border: none; /* Remove border */
+  border-radius: 4px;
   color: white; /* White text */
   padding: 25px 25px; /* Padding */
   text-align: center; /* Center text */

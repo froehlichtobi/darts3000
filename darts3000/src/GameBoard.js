@@ -13,6 +13,9 @@ const GameBoard = ({
       <p>
         Score of {player}: {currentScore}
       </p>
+      {/* ------------------------------------------------------------------------------
+        Buttons from 1 to 25 
+        */}
       <div className="dartsValueButton-container">
         {[...Array(21).keys()].map((num) => (
           <button
@@ -32,8 +35,12 @@ const GameBoard = ({
           </button>
         )}
       </div>
-      <div>
+      {/* ------------------------------------------------------------------------------
+        Buttons for Double, Triple and Undo 
+        */}
+      <div className="dartsValueButton-container">
         <button
+          className="dartsValueButton"
           style={{
             backgroundColor: currentMultiplier === 2 ? "green" : "#0d0000",
             color: "white",
@@ -44,6 +51,7 @@ const GameBoard = ({
         </button>
 
         <button
+          className="dartsValueButton"
           style={{
             backgroundColor: currentMultiplier === 3 ? "green" : "#0d0000",
             color: "white",
@@ -53,7 +61,15 @@ const GameBoard = ({
           TRIPLE
         </button>
 
-        <button onClick={() => handleUndo()}>UNDO</button>
+        <button 
+          className="dartsValueButton"
+          style={{
+            backgroundColor: "red"
+          }}
+          onClick={() => handleUndo()}>
+          UNDO
+
+        </button>
       </div>
     </>
   );
