@@ -113,7 +113,7 @@ const Game = () => {
           />
           <ul>
             {pointsHistory.map((entry, index) => (
-              <li key={index}>
+              <li style={{ textAlign: 'left' }}key={index}>
                 Points: {entry.score * entry.multiplier}
               </li>
             ))}
