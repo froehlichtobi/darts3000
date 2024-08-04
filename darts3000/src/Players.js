@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Players = ({ addPlayer, removePlayer, players }) => {
   return (
-    <div>
+    <div className="dartsPlayers">
       <h2>Players</h2>
       {players.map((player, index) => (
         <div key={index}>

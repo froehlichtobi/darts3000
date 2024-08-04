@@ -1,7 +1,7 @@
 .container {
   width: 75%;
   margin: 0 auto;
-  background-color: cadetblue;
+  background-color: #97BC62;
   color: white;
   text-align: center;
 }
@@ -53,7 +53,7 @@
   justify-content: center; /* Center the grid horizontally */
 }
 .dartsValueButton {
-  background-color: #2b33a5; /* Green background */
+  background-color: #2C5F2D; /* Green background */
   border: none; /* Remove border */
   border-radius: 4px;
   color: white; /* White text */
@@ -69,11 +69,61 @@
 }
 
 .dartsValueButton:hover {
-  background-color: #0c2f85; /* Darker blue on hover */
+  background-color: #306633; /* Darker green on hover */
   transform: scale(1.15); /* Slightly enlarge button on hover */
 }
 
 .dartsValueButton:active {
-  background-color: #031e63; /* Even darker blue when clicked */
+  background-color: #2C5F2D; /* Even darker green when clicked */
   transform: scale(1.05); /* Slightly reduce the scale when clicked */
+}
+
+.dartsFlexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.dartsStartMenuSelectMenu {
+  background-color: #2C5F2D; /* Blue background */
+  border: none; /* Remove border */
+  border-radius: 4px;
+  color: white; /* White text */
+  padding: 6px 6px; /* Padding */
+  margin: 6px 6px;
+  text-align: center; /* Center text */
+  display: block; /* Block display to fill grid cell */
+  font-size: 16px; /* Font size */
+  font-weight: bold;
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.dartsPlayButton {
+  background-color: #2C5F2D;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 10px 35px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+
+.dartsPlayers button {
+  background-color: #2C5F2D;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  text-align: left;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.dartsPlayers input {
+
 }

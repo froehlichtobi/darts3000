@@ -97,7 +97,11 @@ const Game = () => {
             setFinishingMode={setFinishingMode}
           />
 
-          <button onClick={handleStartGame}>Play</button>
+          <button
+           onClick={handleStartGame}
+           className="dartsPlayButton"
+           >
+            Play</button>
         </div>
       )}
 
