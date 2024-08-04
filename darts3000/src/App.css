@@ -69,12 +69,11 @@
 }
 
 .dartsValueButton:hover {
-  background-color: #306633; /* Darker green on hover */
+  background-color: #628E48; /* Lighter green on hover */
   transform: scale(1.15); /* Slightly enlarge button on hover */
 }
 
 .dartsValueButton:active {
-  background-color: #2C5F2D; /* Even darker green when clicked */
   transform: scale(1.05); /* Slightly reduce the scale when clicked */
 }
 
@@ -112,18 +111,30 @@
   margin-bottom: 10px;
 }
 
+.connectInputAndButton {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 
+}
 .dartsPlayers button {
   background-color: #2C5F2D;
   border: none;
-  border-radius: 4px;
   color: white;
   padding: 5px 10px;
+  margin: 0;
   text-align: left;
   font-size: 12px;
   cursor: pointer;
+  
 }
 
 .dartsPlayers input {
-
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+border: 1px solid #2C5F2D;
+padding: 5px 10px;
+font-size: 12px;
+flex: none;
+width: auto;
 }
