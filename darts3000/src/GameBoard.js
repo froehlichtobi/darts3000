@@ -10,9 +10,9 @@ const GameBoard = ({
 }) => {
   return (
     <>
-      <p>
+      <h3>
         Score of {player}: {currentScore}
-      </p>
+      </h3>
       {/* ------------------------------------------------------------------------------
         Buttons from 1 to 25 
         */}
