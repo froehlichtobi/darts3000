@@ -125,6 +125,8 @@ input, button, select, textarea {
   justify-content: center;
 
 }
+
+
 .dartsPlayers button {
   background-color: #2C5F2D;
   border: none;
@@ -134,6 +136,7 @@ input, button, select, textarea {
   text-align: left;
   font-size: 12px;
   cursor: pointer;
+  margin-top: 5px;
   
 }
 
@@ -145,4 +148,5 @@ padding: 5px 10px;
 font-size: 12px;
 flex: none;
 width: auto;
+margin-top:5px;
 }
